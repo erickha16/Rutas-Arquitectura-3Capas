@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BllCamiones.cs" />
     <Compile Include="BllChoferes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

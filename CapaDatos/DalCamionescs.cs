@@ -74,7 +74,7 @@ namespace CapaDatos
 
                 int intResult;
 
-                intResult = MetodoDatos.ExecuteNonQuery("Camiones_Actualizar", "@Id", IdCamion, "@Matricula", Matricula, "@TipoCamion", TipoCamion, "@Modelo", Modelo, "@Marca", Marca, "@Capacidad", Capacidad, "@Kilometraje", Kilometraje, "@UrlFoto", UrlFoto);
+                intResult = MetodoDatos.ExecuteNonQuery("Camiones_Actualizar", "@Id", IdCamion, "@Matricula", Matricula, "@TipoCamion", TipoCamion, "@Modelo", Modelo, "@Marca", Marca, "@Capacidad", Capacidad, "@Kilometraje", Kilometraje, "@Disponibilidad", Disponibilidad, "@UrlFoto", UrlFoto);
             }
             catch (Exception)
             {
