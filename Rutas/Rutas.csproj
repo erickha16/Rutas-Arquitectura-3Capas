@@ -100,6 +100,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Catalogos\Ajax\FetchAPI.aspx" />
+    <Content Include="Catalogos\Ajax\JQueryAjax.aspx" />
+    <Content Include="Catalogos\Ajax\UpdatePanel.aspx" />
     <Content Include="Catalogos\Camiones\AltaCamion.aspx" />
     <Content Include="Catalogos\Camiones\EditarCamiones.aspx" />
     <Content Include="Catalogos\Camiones\ListarCamiones.aspx" />
@@ -200,6 +203,27 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Catalogos\Ajax\FetchAPI.aspx.cs">
+      <DependentUpon>FetchAPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Ajax\FetchAPI.aspx.designer.cs">
+      <DependentUpon>FetchAPI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Ajax\JQueryAjax.aspx.cs">
+      <DependentUpon>JQueryAjax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Ajax\JQueryAjax.aspx.designer.cs">
+      <DependentUpon>JQueryAjax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Ajax\UpdatePanel.aspx.cs">
+      <DependentUpon>UpdatePanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Ajax\UpdatePanel.aspx.designer.cs">
+      <DependentUpon>UpdatePanel.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos\Camiones\AltaCamion.aspx.cs">
       <DependentUpon>AltaCamion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

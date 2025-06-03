@@ -54,6 +54,9 @@
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contacto</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Catalogos/Choferes/listarChoferes.aspx">Choferes</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Catalogos/Camiones/listarCamiones.aspx">Camiones</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Catalogos/Ajax/UpdatePanel.aspx">UpdatePanel</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Catalogos/Ajax/JQueryAjax.aspx">JQueryAjax</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Catalogos/Ajax/FetchAPI.aspx">FetchAPI</a></li>
                     </ul>
                 </div>
             </div>
