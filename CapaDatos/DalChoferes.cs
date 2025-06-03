@@ -29,7 +29,7 @@ namespace CapaDatos
                     dsChoferes = MetodoDatos.ExecuteDataSet("Choferes_listar", "@Disponibilidad");
                 }
 
-                //Declaramos la lista a retornas
+                //Declaramos la lista a retornar
                 List<ChoferesVo> ListaChoferes = new List<ChoferesVo>();
 
                 //Recorremos el DataSet(matriz) para llenar la lista:
@@ -50,8 +50,8 @@ namespace CapaDatos
         }
 
         //Insertar Chofer
-        public static void InsChofer(string paramLicencia, string paramTelefono, string paramNombre, string paramApPaterno, 
-            string paramApMaterno, string paramUrlFoto, DateTime paramFechaNacimiento)
+        public static void InsChofer(string paramLicencia, string paramTelefono, DateTime paramFechaNacimiento, string paramNombre, string paramApPaterno, 
+            string paramApMaterno, string paramUrlFoto)
         {
             try
             {
@@ -66,6 +66,61 @@ namespace CapaDatos
 
             }catch {  throw; }
 
+        }
+
+
+        //Actualizar chofer
+        public static void UpdChofer(int paramIdchofer, string paramLicencia, string paramTelefono, DateTime? paramFechaNacimiento, string paramNombre, string paramApPaterno,
+            string paramApMaterno, string paramUrlFoto, bool? paramDisponibilidad)
+        {
+            try
+            {
+                MetodoDatos.ExecuteNonQuery("Choferes_Actualizar",
+                    "@id", paramIdchofer,
+                     "@Nombre", paramNombre,
+                    "@ApPaterno", paramApPaterno,
+                    "@ApMaterno", paramApMaterno,
+                    "@Telefono", paramTelefono,
+                    "@FechaNacimiento", paramFechaNacimiento,
+                    "@Licencia", paramLicencia,
+                    "@UrlFoto", paramUrlFoto,
+                    "@Disponibilidad", paramDisponibilidad);
+            }
+            catch { throw; }
+        }
+
+
+        //Eliminar 
+        public static void DelChofer(int paramIdChofer)
+        {
+            try
+            {
+                MetodoDatos.ExecuteNonQuery("Choferes_Eliminar",
+                   "@id", paramIdChofer);
+            }
+            catch { throw; }
+        }
+
+        //Obtener registro
+        public static ChoferesVo GetChoferById(int paramIdChofer)
+        {
+
+            try
+            {
+                DataSet dsChofer = MetodoDatos.ExecuteDataSet("Choferes_GetByID", "@id", paramIdChofer);
+
+                if (dsChofer.Tables[0].Rows.Count > 0) { 
+                    DataRow dr = dsChofer.Tables[0].Rows[0];
+                    ChoferesVo Chofer = new ChoferesVo(dr);
+                    return Chofer;
+                }
+                else
+                {
+                    ChoferesVo chofer = new ChoferesVo();
+                    return chofer;
+                }
+            }
+            catch { throw; }
         }
     }
 }

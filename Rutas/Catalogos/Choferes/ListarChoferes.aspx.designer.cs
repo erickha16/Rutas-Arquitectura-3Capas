@@ -7,20 +7,29 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Rutas
+namespace Rutas.Catalogos.Choferes
 {
 
 
-    public partial class SiteMaster
+    public partial class ListarChoferes
     {
 
         /// <summary>
-        /// Control MainContent.
+        /// Control GVChoferes1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.GridView GVChoferes1;
+
+        /// <summary>
+        /// Control GVChoferes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GVChoferes;
     }
 }
