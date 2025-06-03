@@ -11,8 +11,33 @@
             </div>
             <!-- <asp:GridView ID="GVChoferes1" runat="server" CssClass="table table-bordered table-striped table-condensed mt-3" AutoGenerateColumns="true" DataKeyNames="Id">
             </asp:GridView> -->
-            <asp:GridView ID="GVChoferes" runat="server" CssClass="table table-bordered table-striped table-condensed mt-3" AutoGenerateColumns="false" DataKeyNames="Id">
+            
+            <!-- Atributos del  GridView:
+                
+                OnRowDeleting="GVChoferes_RowDeleting" //Elimina al usuario
+                OnRowCommand="GVChoferes_RowCommand" //Redirecciona a una página para editar
+                OnRowEditing="GVChoferes_RowEditing" //Habilita la edición sobre la misma tabla
+                OnRowUpdating ="GVChoferes_RowUpdating" //Actualiza la tabla con los datos disponibles
+                OnRowCancelingEdit="GVChoferes_RowCancelingEdit" //Cancelar el edit
+                
+                -->
+
+            <!-- En los ButtonField DataField debe coincidir con el VO -->
+            <asp:GridView ID="GVChoferes" runat="server"
+                CssClass="table table-bordered table-striped table-condensed mt-3" 
+                AutoGenerateColumns="false" 
+                DataKeyNames="Id"
+                OnRowDeleting="GVChoferes_RowDeleting"
+                OnRowCommand="GVChoferes_RowCommand"
+                OnRowEditing="GVChoferes_RowEditing"
+                OnRowUpdating ="GVChoferes_RowUpdating"
+                OnRowCancelingEdit="GVChoferes_RowCancelingEdit"
+                >
+
+
+
                 <Columns>
+                  
                     <asp:ButtonField
                         ButtonType="Button"
                         CommandName="Select"
@@ -44,7 +69,7 @@
                         DataImageUrlField="URLFoto">
                     </asp:ImageField>
 
-                    <!-- Aquí el DataField debe coincidir con el VO -->
+                    
                     <asp:BoundField
                         DataField="Id" 
                         HeaderText="Chofer"

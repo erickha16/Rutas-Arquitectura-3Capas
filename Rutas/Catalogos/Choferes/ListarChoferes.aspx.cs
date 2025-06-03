@@ -62,7 +62,6 @@ namespace Rutas.Catalogos.Choferes
         protected void GVChoferes_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             //este boton va a redireccionar a un nuevo aspx llamado EditarChofer
-            //por lo tanto hay que crearlo
             if (e.CommandName == "Select")
             {
                 int index = int.Parse(e.CommandArgument.ToString());
@@ -101,5 +100,6 @@ namespace Rutas.Catalogos.Choferes
             GVChoferes.EditIndex = -1;
             RefrescarGrid();
         }
+
     }
 }

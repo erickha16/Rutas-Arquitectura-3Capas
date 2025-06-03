@@ -16,6 +16,7 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="/Content/sweetalert.css" rel="stylesheet" />
+    <script src="/Scripts/sweetalert.min.js"></script>
 
 </head>
 <body>
@@ -69,6 +70,6 @@
         <%: Scripts.Render("~/Scripts/bootstrap.js") %>
     </asp:PlaceHolder>
 
-    <script src="/Scripts/sweetalert.min.js"></script>
+    
 </body>
 </html>

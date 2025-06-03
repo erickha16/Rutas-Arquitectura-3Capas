@@ -57,20 +57,10 @@ namespace CapaNegocio
         {
             try
             {
-                //Verificar disponibilidad del chofer
-                ChoferesVo Chofer = DalChoferes.GetChoferById(paramIdChofer);
-
-                if (Chofer.Disponibilidad)
-                {
-                    DalChoferes.UpdChofer(paramIdChofer, paramLicencia, paramTelefono, paramFechaNacimiento, paramNombre, paramApPaterno, paramApMaterno, paramUrlFoto, paramDisponibilidad);
-                    return "1";
-                }
-                else
-                {
-                    return "0";
-                }
+                DalChoferes.UpdChofer(paramIdChofer, paramLicencia, paramTelefono, paramFechaNacimiento, paramNombre, paramApPaterno, paramApMaterno, paramUrlFoto, paramDisponibilidad);
+                return "1";
             }
-            catch { throw; }
+            catch { return "0"; }
         }
 
         //Eliminar Chofer
