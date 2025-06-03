@@ -13,6 +13,7 @@ namespace VO
         //---------- Atributos --------------------------
         //Convenvión de atributos _minusculas
         private int _id;
+        //Manera implicita con setters y getters incluidos: public int Id {get; set;}
         private string _nombre;
         private string _apPaterno;
         private string _apMaterno;

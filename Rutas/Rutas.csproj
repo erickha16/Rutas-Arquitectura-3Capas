@@ -262,6 +262,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Catalogos\Camiones\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
